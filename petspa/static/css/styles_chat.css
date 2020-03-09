@@ -1,0 +1,142 @@
+/* Estilos Chat*/
+.chat {
+    width: 25%;
+    height: auto;
+    position: fixed;
+    z-index: 100000000;
+    bottom: 0px;
+    right: 0px;
+}
+
+p.title-chat {
+    background-color: #6a41ed;
+    height: 40px;
+    color: white;
+    width: 100%;
+    border: 1px solid #6a41ed;
+    border-radius: 15px 15px 0px 0px;
+    font-family: Raleway;
+    font-size: 22px;
+    padding: 6px 0px 10px 15px;
+    margin-bottom: 0px;
+    border: 1px solid white;
+    border-bottom: none;
+}
+
+.box-chat {
+    width: 100%;
+   	height: auto;
+    display: none;
+    background-color: white;
+}
+
+.body-chat {
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: scroll;
+    background-color: white;
+    border: 1px solid #0000001f;
+}
+
+.form-chat {
+    border: 1px solid #0000001f;
+    border-top: none;
+}
+
+.mensaje-c {
+    width: 80%;
+    display: inline-block;
+    margin-left: 20%;
+    padding: 5px;
+}
+
+p.cl {
+    background-color: dodgerblue;
+    border-radius: 5px;
+    padding: 4px;
+    float: right;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.mensaje-s {
+    width: 80%;
+    display: inline-block;
+    margin-right: 20%;
+    padding: 5px;
+}
+
+p.se {
+    background-color: #de3c3c;
+    border-radius: 5px;
+    right: 0px;
+    position: relative;
+    margin-right: 18%;
+    padding: 4px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+span.info-c {
+    float: right;
+    font-size: 11px;
+    position: relative;
+    top: -7px;
+    right: 5px;
+    margin-bottom: 2px;
+}
+
+span.info-s {
+    float: left;
+    font-size: 11px;
+    position: relative;
+    top: -5px;
+    left: 5px;
+    margin-bottom: 2px;
+}
+
+input.input-mensaje {
+    width: 75%;
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+button.btn.btn-primary.button-send {
+    width: 23.4%;
+    margin: 0px;
+    height: 30px;
+    padding: 0px;
+}
+
+.form-new-chat label{
+    width:25%;
+}
+
+.form-new-chat input{
+    width:50%;
+}
+
+.inputs-new-chat {
+    margin: 15px 0px;
+}
+
+.form-new-chat {
+    background-color: white;
+    border: 1px solid #0000001f;
+    padding: 20px;
+}
+
+@media (max-width: 760px) {
+    .chat {
+        width: 35%;
+    }
+}
+
+@media (max-width: 560px) {
+    .chat {
+        width: 80%;
+        right: 10%;
+    }
+}

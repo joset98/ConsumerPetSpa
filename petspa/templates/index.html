@@ -1,0 +1,141 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block content %}
+<section class="flexslider">
+  <ul class="slides">
+    <li style="background-image: url({% static 'img/slider_1.jpg' %})" class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="probootstrap-slider-text text-center">
+              <h1 class="probootstrap-heading probootstrap-animate">El arreglo de tus mascotas es nuestra misión</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li style="background-image: url( {% static 'img/slider_2.jpg' %} )" class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="probootstrap-slider-text text-center">
+              <h1 class="probootstrap-heading probootstrap-animate">El cuidado es vida</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </li>
+    <!-- modif urls -->
+    <li style="background-image: url( {% static 'img/slider_3.jpg' %} ) " class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="probootstrap-slider-text text-center">
+              <h1 class="probootstrap-heading probootstrap-animate">Ayudando a cada una de nuestras mascotas </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+    {% block PETS_RE%}
+      <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Agregue sus mascotas de forma segura</h2>
+              <section id="inspet" class = "">
+                <form method="post" action="{% url 'mascotas-register' %}" id="rgpet">
+                  {{form_to_Pet}}
+                  <!-- <label for="id_inicio">INICIO:</label><input type="date" name="inicio" required=""/>
+                  <label for="id_final">FINAL:</label><input type="date" name="final" required=""/>
+                  -->
+                  <p></p>
+                <input type="submit" class="enviar" value = "Enviar Datos" />
+                </form>
+              </section>
+            
+            </div>
+          </div>
+
+         
+          <!-- <div class="contentbuttons">
+            <button class="BT"><a href="http://127.0.0.1:8000/home/listthesis">LISTAR</a></button>
+            <button class="BT" onclick="display('rgt')">CONSULTAR</button>
+          </div> -->
+        </div>
+      </section>
+
+    {% endblock %}
+    
+  <!-- <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+          <h2>Ultimos cursos agregados</h2>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+  
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+          <h2>¿Por qué elegirnos?</h2>
+          <p class="lead">Contamos con la mejor atencion de cuidados del mercado.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3>Calidad</h3>
+              <p>Todos nuestros servicios son verificados por lo tanto mantinen un alto estandar de calidad.</p>
+            </div>  
+          </div>
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3>Variedad</h3>
+              <p>Contamos con una amplia cartera de especialistas, y siempre nos encontramos agregando nuevos.</p>
+            </div>
+          </div>
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3>Economia</h3>
+              <p>Nuestros servicios son los mas economicos del mercado con respecto a la calidad/precio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3>Nuevos servicios</h3>
+              <p>Nos encontramos día a día trabajando para siempre ofrecer nuestros servicios que se adaptan a la actualidad.</p>
+            </div>  
+          </div>
+          
+          
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3>Atención al cliente</h3>
+              <p>Contamos con una gran cantidad de personal que se encuentra las 24 horas en linea para atenderte.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- END row -->
+    </div>
+  </section>
+  {% endblock %}

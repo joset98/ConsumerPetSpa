@@ -1,0 +1,94 @@
+{% extends 'template.html' %}
+
+{% block title %}<title>The Pet SPA | modificar Aplicacion</title>{% endblock %}
+
+{% block content %}
+
+<div class="probootstrap-search" id="probootstrap-search">
+  <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+  <form action="#">
+    <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+  </form>
+</div>
+
+<div class="probootstrap-page-wrapper">
+  <!-- Fixed navbar -->
+
+
+  <section class="probootstrap-section probootstrap-section-colored">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-left section-heading probootstrap-animate">
+          <h1>Modificar Aplicación</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+
+     
+    {% block PETS_RE%}
+    <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+            <h2>Modifique sus servicios aplicados</h2>
+            <section id="inspet" class = "">
+              <form method="post" action="{% url 'update-petservice' petservice.id%}" id="mdpetservice">
+
+                <label for="pet">Mascotas alojadas:</label><select name="pet" required="" id="pet">
+                  <option value="" selected="">---------</option>
+                  {% for pet in pet_allocated %}
+                    {% if pet.id == petservice.idPet  %}
+                    <option selected value="{{ pet.id }}" >{{pet.id}}-{{pet.name}}</option>
+                    {% else %} 
+                      <option value="{{ pet.id }}">{{pet.id}}-{{pet.name}}</option>
+                   
+                    {% endif %} 
+                  {% endfor %}
+               
+                </select>
+               <br>
+                <label for="service">Servicio:</label><select name="service" required="" id="service">
+                  <option value="" selected="">---------</option>
+               
+                {% for ser in servicios %}
+                  {% if ser.id == petservice.idService  %}
+                  <option selected value="{{ ser.id }}" >{{ser.name}}</option>
+                  {% else %} 
+                    <option value="{{ ser.id }}">{{ser.name}}</option>
+                 
+                  {% endif %} 
+                {% endfor %}
+             
+                </select>
+                <p></p>
+  
+                <label for="date">Fecha: </label>
+                <input id="date" type="date" name="date" value="{{petservice.fecha}}">
+                <p></p>
+                <label for="hora">Hora del servicio:</label>
+                <input type="time" name="hora" required="" id="hora" value="{{petservice.hora}}">
+                  <p></p>
+              <input type="submit" class="enviar" value="registrar datos" />
+              </form>
+            </section>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {% endblock %}
+  
+
+    </div>
+  </div>
+</section>
+
+</div>
+<!-- END wrapper -->
+{% endblock %}

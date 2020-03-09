@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<!-- 
+  Theme Name: Enlight
+  Theme URL: https://probootstrap.com/enlight-free-education-responsive-bootstrap-website-template
+  Author: ProBootstrap.com
+  Author URL: https://probootstrap.com
+  License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block title %}<title>The Pet SPA | Inicio</title>{% endblock %}
+  <meta name="description" content="Free Bootstrap Theme by ProBootstrap.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+  {% load static %}
+  <link rel="icon" href="{% static 'img/favicon.png'%}" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
+
+  <!-- Add additional CSS in static file -->
+
+  <link rel="stylesheet" href="{% static 'css/styles-merged.css'%}">
+  <link rel="stylesheet" href="{% static 'css/styles_chat.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="probootstrap-search" id="probootstrap-search">
+      <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+      <form action="#">
+        <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+      </form>
+    </div>
+    
+    <div class="probootstrap-page-wrapper">
+      <!-- Fixed navbar -->
+      
+      <nav class="navbar navbar-default probootstrap-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="btn-more js-btn-more visible-xs">
+              <a href="#"><i class="icon-dots-three-vertical "></i></a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar" href="{% url 'index' %}" title="Logo thepetspa">The Pet SPA</a>
+          </div>
+
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <!-- modif urls -->
+              <li class="active"><a href="{% url 'index' %}">Inicio</a></li>
+              <li><a href="{% url 'mascotas' %} ">Mascotas</a></li>
+              <li><a href="{% url 'servicios' %}">Servicios</a></li>
+              <li><a href="{% url 'alojamiento' %}">Alojamiento</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      
+      {% block content %}{% endblock %}
+      <!-- footer -->
+      <section class="probootstrap-cta">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Habla con nosotros ahora!</h2>
+              <a href="#" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate chatnowbutton" data-animate-effect="fadeInLeft">Chat</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="probootstrap-footer probootstrap-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+                <h3>Acerca de los Servicios</h3>
+                <p>Contamos con una gran variedad de Servicios de la mejor calidad, que te ayudaran al cuidado de tu mascota en el área que desees.</p>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-md-push-1">
+            <div class="probootstrap-footer-widget">
+              <h3>Links</h3>
+              <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'mascotas' %}">Mascotas</a></li>
+                <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                <li><a href="{% url 'alojamiento' %}">Alojamiento</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>Información de Contacto</h3>
+              <ul class="probootstrap-contact-info">
+                <li><i class="icon-location2"></i> <span>Av. atlantico,Ciudad Guayana, Estado Bolívar 8052</span></li>
+                <li><i class="icon-mail"></i><span>info@thepetspa.com</span></li>
+                <li><i class="icon-phone2"></i><span>+58 286 123 7890</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <!-- END row -->
+
+      </div>
+
+      <div class="probootstrap-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 text-left">
+              <p>© 2019 | Realizado por Jose Tovar y Diviana Pino</p>
+            </div>
+            <div class="col-md-4 probootstrap-back-to-top">
+              <p><a href="#" class="js-backtotop">Ir a arriba <i class="icon-arrow-long-up"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- END wrapper -->
+
+  <!-- cambiar urls -->
+  <script src="{% static 'js/scripts.min.js' %}"></script>
+  <script src="{% static 'js/main.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'js/jquery.cookie.js' %}"></script>
+  <script src="{% static 'js/chat.js' %}"></script>
+
+</body>
+</html>

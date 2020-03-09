@@ -1,0 +1,48 @@
+{% extends 'template.html' %}
+
+{% block title %}<title>The Pet Spa | Alojamiento {{ servicio.name }} </title>{% endblock %}
+
+{% block content %}
+
+<div class="probootstrap-search" id="probootstrap-search">
+  <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+  <form action="#">
+    <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+  </form>
+</div>
+
+<div class="probootstrap-page-wrapper">
+  <!-- Fixed navbar -->
+
+
+  <section class="probootstrap-section probootstrap-section-colored">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-left section-heading probootstrap-animate">
+          <h1>{{ servicio.name }}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section col-md-offset-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>{{servicio.description}}</h2>
+
+      </div>
+    </div>
+    <p>
+      <div class=" col-md-offset-1">
+        <a href="{% url 'modify-service' servicio.id %}" class="btn btn-primary ">Modificar</a> 
+        <a href="{% url 'delete-service' servicio.id %}" class="btn btn-danger ">Eliminar</a> 
+      </div>
+    </p>
+    
+  </div>
+</section>
+
+</div>
+<!-- END wrapper -->
+{% endblock %}
